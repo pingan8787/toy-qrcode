@@ -1,3 +1,5 @@
+import rollupPluginJSON from '@rollup/plugin-json';
+
 export default {
   input: 'src/index.ts',
   output: {
@@ -5,5 +7,5 @@ export default {
     format: 'cjs',
     name: 'toy-qecode'
   },
-  plugins: []
+  plugins: [rollupPluginJSON()]
 }

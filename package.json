@@ -2,13 +2,15 @@
   "name": "toy-qrcode",
   "version": "1.0.0",
   "description": "Very useful qrcode tool",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
+  "main": "./dist/index.js",
+  "bin": {
+    "toy-qrcode": "./cli.js"
   },
   "scripts": {
-    "dev": "rollup -c",
-    "build": "rollup"
+    "dev": "rollup -c -w",
+    "build": "rollup",
+    "test": "npm install -g",
+    "test-g": "toy-qrcode g -t=https://www.qq.com"
   },
   "repository": {
     "type": "git",
@@ -25,8 +27,13 @@
   },
   "homepage": "https://github.com/pingan8787/toy-qrcode#readme",
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-typescript": "^8.3.0",
+    "cac": "^6.7.12",
     "rollup": "^2.63.0"
+  },
+  "engines": {
+    "node": ">=8"
   },
   "dependencies": {
     "typescript": "^4.5.4"
