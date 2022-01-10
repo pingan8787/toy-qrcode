@@ -1,5 +1,5 @@
 import path from 'path';
-import { execa } from 'execa';
+import execa from 'execa';
 
 // esno ./src/index.ts g -t=https://www.qq.com2 -d=12
 
@@ -13,9 +13,5 @@ test('simple test', async () => {
         './dist/'
     ])
 
-    console.log('[res]', res)
-
-    expect(res.stdout).toMatchInlineSnapshot(`
-        "[toy-qrcode][generate]"
-    `)
+    expect(res.stdout).toEqual(`[toy-qrcode][generate] {"value":"https://www.qq.com","options":{"--":[],"type":"node","t":true,"d":true,"text":true,"dist":true}}`);
 })
