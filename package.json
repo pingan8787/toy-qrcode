@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup",
-    "test": "npm install -g",
-    "test-g": "toy-qrcode g -t=https://www.qq.com"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,10 +26,18 @@
   },
   "homepage": "https://github.com/pingan8787/toy-qrcode#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-typescript": "^8.3.0",
+    "@types/jest": "^27.4.0",
     "cac": "^6.7.12",
-    "rollup": "^2.63.0"
+    "execa": "^6.0.0",
+    "jest": "^27.4.7",
+    "rollup": "^2.63.0",
+    "ts-jest": "^27.1.2",
+    "tslib": "*"
   },
   "engines": {
     "node": ">=8"
